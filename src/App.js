@@ -1,20 +1,21 @@
 import React, { Component }  from 'react';
 import './App.css';
 import Info from "./Info.js";
+import PropTypes from "prop-types";
 
 function App() {
   return (
     <div className="App">
-      <Info />
-      <AddItem />
-      <AddItem />
+      <Info text="Inventory" />
+      <AddItem text="test" />
+      <AddItem text="test2" />
       <AddItem />
     </div>
   );
 }
 
-function AddItem() {
-  const value = "this is default value";
+function AddItem(props) {
+  const value = props.text;
 
   return (
     <form>
@@ -23,5 +24,15 @@ function AddItem() {
     </form>
   );
 }
+
+AddItem.defaultProps = {
+  number: 1,
+  text: "default text"
+};
+
+AddItem.propTypes = {
+  number: PropTypes.number,
+  text: PropTypes.string
+};
 
 export default App;
