@@ -1,39 +1,27 @@
-import React, {Component} from 'react';
+import React, { Component }  from 'react';
 import './App.css';
+import Info from "./Info.js";
 
 function App() {
   return (
     <div className="App">
-      <Info/>
-      <AddItem/>
+      <Info />
+      <AddItem />
+      <AddItem />
+      <AddItem />
     </div>
   );
 }
 
-function Info() {
-  const title = "This is title";
-  const showTitle = true;
-
-  if(showTitle) {
-    return (
-      <div>
-        <h1>{title}</h1>
-        <p>Manage</p>
-      </div>
-    )
-  }
-
-  return <p>NOTHING</p>
-}
-
 function AddItem() {
+  const value = "this is default value";
+
   return (
     <form>
-      <lable for="text-form">Type something </lable>
-      <input type="text" id="text-form"></input>
+      <lable for="text-form">Type something: </lable>
+      <input type="text" value={value} id="text-form"></input>
     </form>
-    
-  )
+  );
 }
 
 export default App;
