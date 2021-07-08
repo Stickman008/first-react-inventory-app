@@ -9,6 +9,7 @@ function SearchBar(props) {
 
   const searchButtonPressed = () => {
     console.log([name, price, type, brand]);
+    props.callback({ name: name, price: price, type: type, brand: brand });
   };
 
   return (
@@ -58,10 +59,6 @@ function SearchBar(props) {
           Search
         </button>
       </form>
-      <p>Name: {name}</p>
-      <p>Price: {price}</p>
-      <p>Type: {type}</p>
-      <p>Brand: {brand}</p>
     </div>
   );
 }
