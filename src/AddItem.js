@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import { useState } from "react";
 
-function SearchBar(props) {
+function AddItem(props) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [type, setType] = useState("");
   const [brand, setBrand] = useState("");
 
-  const searchButtonPressed = () => {
-    console.log([name, price, type, brand]);
-    props.updateSearchParams({ name: name, price: price, type: type, brand: brand });
+  const addItemButtonPressed = () => {
+    props.addItem({ name: name, price: price, type: type, brand: brand });
   };
 
   return (
     <div>
-      <h2>SEARCH</h2>
+      <h2>ADD ITEM</h2>
       <form autocomplete="off">
         <label htmlFor="name-feild">Name: </label>
         <input
@@ -26,7 +25,7 @@ function SearchBar(props) {
           }}
         ></input>
 
-        <label htmlFor="price-feild">Max Price: </label>
+        <label htmlFor="price-feild">Price: </label>
         <input
           id="price-field"
           type="number"
@@ -56,12 +55,12 @@ function SearchBar(props) {
           }}
         ></input>
 
-        <button type="button" onClick={searchButtonPressed}>
-          Search
+        <button type="button" onClick={addItemButtonPressed}>
+          Add
         </button>
       </form>
     </div>
   );
 }
 
-export default SearchBar;
+export default AddItem;

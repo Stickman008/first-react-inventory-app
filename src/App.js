@@ -2,24 +2,31 @@ import React, { Component } from "react";
 import "./App.css";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
-import PropTypes from "prop-types";
+import AddItem from "./AddItem";
 
 function App() {
-  const [data, setData] = useState({});
+  const [filters, setFilters] = useState({});
+  const [data, setData] = useState({ items: [] });
 
-  const updateData = (searchParams) => {
-    setData(searchParams);
+  const updateFilters = (searchParams) => {
+    setFilters(searchParams);
+  };
+
+  const addItemToData = (item) => {
+    let items = data["items"];
+    items.push(item);
+    setData({items: items});
+    console.log(data);
   };
 
   return (
     <div className="App">
-      <SearchBar callback={updateData} />
-      <br></br>
-      <hr></hr>
-      <p>Name: {"name" in data ? data["name"] : "No Data"}</p>
-      <p>Max Price: {"price" in data ? data["price"] : "No Data"}</p>
-      <p>Type: {"type" in data ? data["type"] : "No Data"}</p>
-      <p>Brand: {"brand" in data ? data["brand"] : "No Data"}</p>
+      <SearchBar updateSearchParams={updateFilters} />
+      <AddItem addItem={addItemToData} />
+      {/* <p>Name: {"name" in filters ? filters["name"] : "No Data"}</p>
+      <p>Max Price: {"price" in filters ? filters["price"] : "No Data"}</p>
+      <p>Type: {"type" in filters ? filters["type"] : "No Data"}</p>
+      <p>Brand: {"brand" in filters ? filters["brand"] : "No Data"}</p> */}
     </div>
   );
 }
