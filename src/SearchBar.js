@@ -34,6 +34,7 @@ function SearchBar(props) {
             setPrice(e.target.value);
           }}
         ></input>
+
         <label htmlFor="type-feild">Type: </label>
         <input
           id="type-field"
@@ -58,10 +59,6 @@ function SearchBar(props) {
           Search
         </button>
       </form>
-      <p>Name: {name}</p>
-      <p>Price: {price}</p>
-      <p>Type: {type}</p>
-      <p>Brand: {brand}</p>
     </div>
   );
 }
