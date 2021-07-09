@@ -18,53 +18,70 @@ function SearchBar(props) {
   };
 
   return (
-    <div>
-      <h2>SEARCH</h2>
-      <form autoComplete="off">
-        <label htmlFor="name-feild">Name: </label>
-        <input
-          id="name-field"
-          type="text"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        ></input>
+    <div className="container">
+      <div className="row">
+        <h2>SEARCH</h2>
+      </div>
 
-        <label htmlFor="price-feild">Max Price: </label>
-        <input
-          id="price-field"
-          type="number"
-          value={price}
-          onChange={(e) => {
-            setPrice(e.target.value);
-          }}
-        ></input>
+      <div className="row">
+        <div className="col">
+          <label htmlFor="name-feild">Name: </label>
+          <input
+            id="name-field"
+            type="text"
+            className="form-control"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          ></input>
+        </div>
 
-        <label htmlFor="type-feild">Type: </label>
-        <input
-          id="type-field"
-          type="text"
-          value={type}
-          onChange={(e) => {
-            setType(e.target.value);
-          }}
-        ></input>
+        <div className="col">
+          <label htmlFor="price-feild">Max Price: </label>
+          <input
+            id="price-field"
+            type="number"
+            value={price}
+            className="form-control"
+            onChange={(e) => {
+              setPrice(e.target.value);
+            }}
+          ></input>
+        </div>
 
-        <label htmlFor="brand-feild">Brand: </label>
-        <input
-          id="brand-field"
-          type="text"
-          value={brand}
-          onChange={(e) => {
-            setBrand(e.target.value);
-          }}
-        ></input>
+        <div className="col">
+          <label htmlFor="type-feild">Type: </label>
+          <input
+            id="type-field"
+            type="text"
+            className="form-control"
+            value={type}
+            onChange={(e) => {
+              setType(e.target.value);
+            }}
+          ></input>
+        </div>
 
+        <div className="col">
+          <label htmlFor="brand-feild">Brand: </label>
+          <input
+            id="brand-field"
+            type="text"
+            className="form-control"
+            value={brand}
+            onChange={(e) => {
+              setBrand(e.target.value);
+            }}
+          ></input>
+        </div>
+      </div>
+
+      <div className="row">
         <button type="button" onClick={searchButtonPressed}>
           Search
         </button>
-      </form>
+      </div>
     </div>
   );
 }

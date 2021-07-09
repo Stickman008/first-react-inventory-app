@@ -21,14 +21,16 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <SearchBar updateSearchParams={updateFilters} />
-      <AddItem addItem={addItemToData} />
-      <ItemsDisplay items={data["items"]}/>
-      {/* <p>Name: {"name" in filters ? filters["name"] : "No Data"}</p>
-      <p>Max Price: {"price" in filters ? filters["price"] : "No Data"}</p>
-      <p>Type: {"type" in filters ? filters["type"] : "No Data"}</p>
-      <p>Brand: {"brand" in filters ? filters["brand"] : "No Data"}</p> */}
+    <div className="container">
+      <div className="row mt-3">
+        <SearchBar updateSearchParams={updateFilters} />
+      </div>
+      <div className="row mt-3">
+        <AddItem addItem={addItemToData} />
+      </div>
+      <div className="row mt-3">
+        <ItemsDisplay items={data["items"]} />
+      </div>
     </div>
   );
 }
