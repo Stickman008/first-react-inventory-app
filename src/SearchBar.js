@@ -9,13 +9,18 @@ function SearchBar(props) {
 
   const searchButtonPressed = () => {
     console.log([name, price, type, brand]);
-    props.updateSearchParams({ name: name, price: price, type: type, brand: brand });
+    props.updateSearchParams({
+      name: name,
+      price: price,
+      type: type,
+      brand: brand,
+    });
   };
 
   return (
     <div>
       <h2>SEARCH</h2>
-      <form autocomplete="off">
+      <form autoComplete="off">
         <label htmlFor="name-feild">Name: </label>
         <input
           id="name-field"

@@ -9,12 +9,16 @@ function AddItem(props) {
 
   const addItemButtonPressed = () => {
     props.addItem({ name: name, price: price, type: type, brand: brand });
+    setName("");
+    setPrice(0);
+    setType("");
+    setBrand("");
   };
 
   return (
     <div>
       <h2>ADD ITEM</h2>
-      <form autocomplete="off">
+      <form autoComplete="off">
         <label htmlFor="name-feild">Name: </label>
         <input
           id="name-field"
