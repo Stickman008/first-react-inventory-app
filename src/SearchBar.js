@@ -30,6 +30,7 @@ function SearchBar(props) {
             id="name-field"
             type="text"
             className="form-control"
+            // autoComplete="off"
             value={name}
             onChange={(e) => {
               setName(e.target.value);
@@ -77,10 +78,15 @@ function SearchBar(props) {
         </div>
       </div>
 
-      <div className="row">
-        <button type="button" onClick={searchButtonPressed}>
-          Search
-        </button>
+      <div className="row mt-3">
+        <div className="col-4" />
+          <button
+            type="button"
+            className="col-4 btn btn-primary"
+            onClick={searchButtonPressed}
+          >
+            Search
+          </button>
       </div>
     </div>
   );
