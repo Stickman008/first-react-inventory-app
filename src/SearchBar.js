@@ -33,7 +33,7 @@ function SearchBar(props) {
             // autoComplete="off"
             value={name}
             onChange={(e) => {
-              setName(e.target.value);
+              setName(e.target.value.trimLeft());
             }}
           ></input>
         </div>
@@ -46,7 +46,7 @@ function SearchBar(props) {
             value={price}
             className="form-control"
             onChange={(e) => {
-              setPrice(e.target.value);
+              setPrice(e.target.value.trimLeft());
             }}
           ></input>
         </div>
@@ -59,7 +59,7 @@ function SearchBar(props) {
             className="form-control"
             value={type}
             onChange={(e) => {
-              setType(e.target.value);
+              setType(e.target.value.trimLeft());
             }}
           ></input>
         </div>
@@ -72,7 +72,7 @@ function SearchBar(props) {
             className="form-control"
             value={brand}
             onChange={(e) => {
-              setBrand(e.target.value);
+              setBrand(e.target.value.trimLeft());
             }}
           ></input>
         </div>
