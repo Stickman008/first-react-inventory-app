@@ -23,7 +23,7 @@ function App() {
   const filterData = (data) => {
     const filteredData = [];
 
-    if(!filters.name) {
+    if (!filters.name) {
       return data;
     }
 

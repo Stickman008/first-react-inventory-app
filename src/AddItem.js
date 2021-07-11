@@ -8,6 +8,7 @@ function AddItem(props) {
   const [brand, setBrand] = useState("");
 
   const addItemButtonPressed = () => {
+    console.log([name, price, type, brand]);
     props.addItem({ name: name, price: price, type: type, brand: brand });
     setName("");
     setPrice(0);
@@ -43,7 +44,7 @@ function AddItem(props) {
             className="form-control"
             value={price}
             onChange={(e) => {
-              setPrice(e.target.value);
+              setPrice(Number(e.target.value));
             }}
           ></input>
         </div>

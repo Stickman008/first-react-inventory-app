@@ -29,15 +29,7 @@ function ItemsDisplay(props) {
               <th scope="col">Brand</th>
             </tr>
           </thead>
-          <tbody>
-            {props.items.length !== 0 ? (
-              props.items.map(showItem)
-            ) : (
-              <div className="row">
-                <h1 className="text-danger">NOT FOUND</h1>
-              </div>
-            )}
-          </tbody>
+          <tbody>{props.items.map(showItem)}</tbody>
         </table>
       </div>
     </div>
