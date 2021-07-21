@@ -1,60 +1,11 @@
 {
   "items": [
     {
-      "name": "name1",
-      "price": 3.99,
-      "type": "type1",
-      "brand": "brand1",
-      "id": 1
-    },
-    {
-      "name": "test1",
-      "price": 900,
-      "type": "type1",
-      "brand": "brand1",
-      "id": 2
-    },
-    {
-      "name": "",
-      "price": 0,
-      "type": "",
-      "brand": "",
-      "id": 3
-    },
-    {
-      "name": "fd",
-      "price": 2,
-      "type": "d",
-      "brand": "d\\b\\",
-      "id": 4
-    },
-    {
-      "name": "",
-      "price": 0,
-      "type": "",
-      "brand": "",
-      "id": 5
-    },
-    {
-      "name": "fs",
+      "name": "f",
       "price": 1,
-      "type": "e",
-      "brand": "e",
-      "id": 6
-    },
-    {
-      "name": "name1",
-      "price": 11,
-      "type": "e",
+      "type": "t",
       "brand": "b",
-      "id": 7
-    },
-    {
-      "name": "ds",
-      "price": 1,
-      "type": "xxx",
-      "brand": "a",
-      "id": 8
+      "id": 1
     }
   ]
 }

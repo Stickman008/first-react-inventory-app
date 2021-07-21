@@ -12,7 +12,9 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/items")
       .then((response) => response.json())
-      .then((data) => {setData({items: data})});
+      .then((data) => {
+        setData({ items: data });
+      });
   }, []);
 
   const updateFilters = (searchParams) => {
@@ -35,6 +37,23 @@ function App() {
         items.push(data);
         setData({ items: items });
       });
+  };
+
+  const deleteItem = (item) => {
+    console.log("deleteItem");
+    const items = data["items"];
+    const requestOptions = {
+      method: "DELETE",
+    };
+    fetch(`http://localhost:3000/items/${item.id}`, requestOptions).then(
+      (response) => {
+        if (response.ok) {
+          const idx = items.indexOf(item);
+          items.splice(idx, 1);
+          setData({ items: items });
+        }
+      }
+    );
   };
 
   const filterData = (data) => {
@@ -73,7 +92,10 @@ function App() {
         <AddItem addItem={addItemToData} />
       </div>
       <div className="row mt-3">
-        <ItemsDisplay items={filterData(data["items"])} />
+        <ItemsDisplay
+          deleteItem={deleteItem}
+          items={filterData(data["items"])}
+        />
       </div>
     </div>
   );
