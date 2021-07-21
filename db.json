@@ -20,6 +20,41 @@
       "type": "",
       "brand": "",
       "id": 3
+    },
+    {
+      "name": "fd",
+      "price": 2,
+      "type": "d",
+      "brand": "d\\b\\",
+      "id": 4
+    },
+    {
+      "name": "",
+      "price": 0,
+      "type": "",
+      "brand": "",
+      "id": 5
+    },
+    {
+      "name": "fs",
+      "price": 1,
+      "type": "e",
+      "brand": "e",
+      "id": 6
+    },
+    {
+      "name": "name1",
+      "price": 11,
+      "type": "e",
+      "brand": "b",
+      "id": 7
+    },
+    {
+      "name": "ds",
+      "price": 1,
+      "type": "xxx",
+      "brand": "a",
+      "id": 8
     }
   ]
 }

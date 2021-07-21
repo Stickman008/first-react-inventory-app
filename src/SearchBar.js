@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { useState } from "react";
 
 function SearchBar(props) {
@@ -27,7 +27,7 @@ function SearchBar(props) {
         <div className="col">
           <label htmlFor="name-feild">Name: </label>
           <input
-            id="name-field"
+            id="search-name-field"
             type="text"
             className="form-control"
             // autoComplete="off"
@@ -41,7 +41,7 @@ function SearchBar(props) {
         <div className="col">
           <label htmlFor="price-feild">Max Price: </label>
           <input
-            id="price-field"
+            id="search-price-field"
             type="number"
             value={price}
             className="form-control"
@@ -54,7 +54,7 @@ function SearchBar(props) {
         <div className="col">
           <label htmlFor="type-feild">Type: </label>
           <input
-            id="type-field"
+            id="search-type-field"
             type="text"
             className="form-control"
             value={type}
@@ -67,7 +67,7 @@ function SearchBar(props) {
         <div className="col">
           <label htmlFor="brand-feild">Brand: </label>
           <input
-            id="brand-field"
+            id="search-brand-field"
             type="text"
             className="form-control"
             value={brand}
